@@ -1,0 +1,57 @@
+sudo add-apt-repository ppa:oibaf/graphics-drivers
+sudo apt update
+sudo apt upgrade
+sudo apt install libvulkan1 mesa-vulkan-drivers vulkan-utils
+
+sudo apt install git
+cd Documents
+mkdir repositories
+cd repositories
+git clone https://github.com/nlogocntrcaphnt/dotfiles.git
+cd dotfiles
+
+mv config .config
+mv mpd .mpd 
+mv ncmpcpp .ncmpcpp
+mv newsboat .newsboat
+mv vim .vim
+mv fonts .fonts
+
+cp -r .config /home/polyphemus/
+cp -r .mpd /home/polyphemus/
+cp -r .ncmpcpp /home/polyphemus/
+cp -r .newsboat /home/polyphemus/
+cp -r .vim /home/polyphemus/
+cp -r .fonts /home/polyphemus/
+
+cp compton.conf /home/polyphemus/
+cp .asoundrc /home/polyphemus/
+cp .bashrc /home/polyphemus/
+cp .rtorrent.rc /home/polyphemus/
+cp .Xresources /home/polyphemus/
+
+cd
+
+sudo apt install neovim mpd ncmpcpp mpc rxvt-unicode newsboat dmenu xclip maim feh rsync i3status i3lock autoconf make xutils-dev build-essential ffmpeg task-spooler youtube-dl audacity neofetch
+xrdb .Xresources
+
+sudo add-apt-repository ppa:kgilmer/speed-ricer
+sudo apt-get update
+sudo apt install i3-gaps
+
+sudo add-apt-repository ppa:mc3man/mpv-tests
+sudo apt update
+sudo apt install mpv
+
+cd Documents/repositories/
+git clone https://github.com/nlogocntrcaphnt/scripts.git
+cd scripts
+
+for file in /home/polyphemus/Documents/scripts/*; do
+    if [[ $file == *".sh"* ]] 
+	then
+		script="$(echo "${file##*/}")"
+		cp $script /home/polyphemus/
+	fi
+fi
+done
