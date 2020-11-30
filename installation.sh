@@ -29,10 +29,11 @@ cp .asoundrc /home/polyphemus/
 cp .bashrc /home/polyphemus/
 cp .rtorrent.rc /home/polyphemus/
 cp .Xresources /home/polyphemus/
+cp wallpaper_test.jpeg ~/Pictures/
 
 cd
 
-sudo apt install neovim mpd ncmpcpp mpc rxvt-unicode newsboat dmenu xclip maim feh rsync i3status i3lock autoconf make xutils-dev build-essential ffmpeg task-spooler youtube-dl audacity neofetch
+sudo apt install neovim mpd ncmpcpp mpc rxvt-unicode newsboat dmenu xclip maim feh rsync i3status i3lock autoconf make xutils-dev build-essential ffmpeg task-spooler youtube-dl audacity neofetch ffmpegthumbnailer zathura lxappearance rtorrent sdcv texlive-latex-extra
 xrdb .Xresources
 
 sudo add-apt-repository ppa:kgilmer/speed-ricer
@@ -53,5 +54,31 @@ for file in /home/polyphemus/Documents/scripts/*; do
 		script="$(echo "${file##*/}")"
 		cp $script /home/polyphemus/
 	fi
-fi
 done
+
+mkdir ~/Pictures/screenshots
+mkdir ~/Pictures/screenshots_mpv
+
+sudo dpkg --add-architecture i386
+wget -nc https://dl.winehq.org/wine-builds/winehq.key
+sudo apt-key add winehq.key
+
+sudo add-apt-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ focal main' 
+sudo apt update
+sudo apt install --install-recommends winehq-staging
+
+cd Downloads
+git clone https://github.com/doitsujin/dxvk.git
+cd dxvk
+export WINEPREFIX=~/.wine
+./setup_dxvk.sh install
+
+#enable bitmap fonts
+sudo rm /etc/fonts/conf.d/70-no-bitmaps.conf
+dpkg-reconfigure fontconfig-config
+dpkg-reconfigure fontconfig
+fc-cache -f
+
+cd
+cd Documents/repositories
+git clone https://github.com/nlogocntrcaphnt/Homepage.git
