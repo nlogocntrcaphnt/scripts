@@ -9,6 +9,7 @@ cp ~/.newsboat/urls ~/Documents/repositories/dotfiles/.newsboat/
 cp -r ~/.ncmpcpp ~/Documents/repositories/dotfiles/
 cp ~/.mozilla/firefox/097lo5ak.default-release/chrome/userChrome.css ~/Documents/repositories/dotfiles/.mozilla/firefox/097lo5ak.default-release/chrome/
 cp ~/.Xresources ~/Documents/repositories/dotfiles/
+cp ~/.bashrc ~/Documents/repositories/dotfiles/
 
 cp ~/.config/fontconfig/fonts.conf ~/Documents/repositories/dotfiles/.config/fontconfig/
 cp ~/.config/i3/config ~/Documents/repositories/dotfiles/.config/i3/
