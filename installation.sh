@@ -33,7 +33,7 @@ cp wallpaper_test.jpeg ~/Pictures/
 
 cd
 
-sudo apt install neovim mpd ncmpcpp mpc rxvt-unicode newsboat dmenu xclip maim feh rsync i3status i3lock autoconf make xutils-dev build-essential ffmpeg task-spooler youtube-dl audacity neofetch ffmpegthumbnailer zathura lxappearance rtorrent sdcv texlive-latex-extra
+sudo apt install neovim mpd ncmpcpp mpc rxvt-unicode newsboat dmenu xclip maim feh rsync i3status i3lock autoconf make xutils-dev build-essential ffmpeg task-spooler audacity neofetch ffmpegthumbnailer zathura lxappearance rtorrent sdcv texlive-latex-extra openssh-server python curl
 xrdb .Xresources
 
 sudo add-apt-repository ppa:kgilmer/speed-ricer
@@ -43,6 +43,9 @@ sudo apt install i3-gaps
 sudo add-apt-repository ppa:mc3man/mpv-tests
 sudo apt update
 sudo apt install mpv
+
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
 
 cd Documents/repositories/
 git clone https://github.com/nlogocntrcaphnt/scripts.git
