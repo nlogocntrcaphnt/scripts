@@ -4,6 +4,10 @@ rsync -uPArv ~/Videos /media/polyphemus/C802F15202F145CA
 rsync -uPArv ~/Documents /media/polyphemus/C802F15202F145CA
 rsync -uPArv ~/Pictures /media/polyphemus/C802F15202F145CA
 
+sudo rsync -uPArv ~/Videos /media/polyphemus/A60CCF300CCEFA77
+sudo rsync -uPArv ~/Documents /media/polyphemus/A60CCF300CCEFA77
+sudo rsync -uPArv ~/Pictures /media/polyphemus/A60CCF300CCEFA77
+
 cp ~/.newsboat/config ~/Documents/repositories/dotfiles/.newsboat/
 cp ~/.newsboat/urls ~/Documents/repositories/dotfiles/.newsboat/
 cp -r ~/.ncmpcpp ~/Documents/repositories/dotfiles/
