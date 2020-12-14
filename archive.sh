@@ -28,7 +28,7 @@ cd Documents/repositories/dotfiles/
 git add .
 git commit -m "Update"
 #git remote add origin https://github.com/nlogocntrcaphnt/dotfiles.git
-git push -u origin main
+git push -u laptop laptop_main
 
 #for file in /home/polyphemus/*; do
 #    if [[ $file == *".sh"* ]]
@@ -47,6 +47,6 @@ cd ~/Documents/repositories/scripts/
 git add .
 git commit -m "Update"
 #git remote add origin https://github.com/nlogocntrcaphnt/scripts.git
-git push -u origin main
+git push -u laptop laptop_main
 
 sudo youtube-dl -U
