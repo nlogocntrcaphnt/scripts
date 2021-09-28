@@ -30,13 +30,13 @@ git commit -m "Update"
 #git remote add origin https://github.com/nlogocntrcaphnt/dotfiles.git
 git push -u origin main
 
-#for file in /home/polyphemus/*; do
-#    if [[ $file == *".sh"* ]]
-#	then
-#		echo $file
-#		cp $file ~/Documents/repositories/scripts/
-#	fi
-#done
+for file in /home/polyphemus/*; do
+    if [[ $file == *".sh"* ]]
+	then
+		echo $file
+		cp $file ~/Documents/repositories/scripts/
+	fi
+done
 
 cp ~/installation.sh ~/Documents/repositories/scripts/
 cp ~/archive.sh ~/Documents/repositories/scripts/
