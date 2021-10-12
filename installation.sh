@@ -33,7 +33,7 @@ cp wallpaper_test.jpeg ~/Pictures/
 
 cd
 
-sudo apt install neovim mpd ncmpcpp mpc rxvt-unicode newsboat dmenu xclip maim feh rsync i3status i3lock autoconf make xutils-dev build-essential ffmpeg task-spooler audacity neofetch ffmpegthumbnailer zathura lxappearance rtorrent sdcv texlive-latex-extra openssh-server python curl
+sudo apt install neovim mpd ncmpcpp mpc rxvt-unicode newsboat dmenu xclip maim feh rsync i3status i3lock autoconf make xutils-dev build-essential ffmpeg task-spooler audacity neofetch ffmpegthumbnailer zathura lxappearance rtorrent sdcv texlive-latex-extra openssh-server python curl python3-pip
 xrdb .Xresources
 
 sudo add-apt-repository ppa:kgilmer/speed-ricer
