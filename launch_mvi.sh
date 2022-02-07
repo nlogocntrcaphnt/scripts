@@ -1,1 +1,1 @@
-mpv --config-dir=/home/kostis/.config/mvi $@
+mpv --config-dir=/home/polyphemus/.config/mvi $@

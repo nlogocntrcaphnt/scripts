@@ -1,12 +1,12 @@
 #!/bin/bash
 
-rsync -uPArv ~/Videos /media/polyphemus/C802F15202F145CA
-rsync -uPArv ~/Documents /media/polyphemus/C802F15202F145CA
-rsync -uPArv ~/Pictures /media/polyphemus/C802F15202F145CA
+rsync -uPArv ~/Videos /run/media/polyphemus/C802F15202F145CA
+rsync -uPArv ~/Documents /run/media/polyphemus/C802F15202F145CA
+rsync -uPArv ~/Pictures /run/media/polyphemus/C802F15202F145CA
 
-sudo rsync -uPArv ~/Videos /media/polyphemus/A60CCF300CCEFA77
-sudo rsync -uPArv ~/Documents /media/polyphemus/A60CCF300CCEFA77
-sudo rsync -uPArv ~/Pictures /media/polyphemus/A60CCF300CCEFA77
+sudo rsync -uPArv ~/Videos /run/media/polyphemus/A60CCF300CCEFA77
+sudo rsync -uPArv ~/Documents /run/media/polyphemus/A60CCF300CCEFA77
+sudo rsync -uPArv ~/Pictures /run/media/polyphemus/A60CCF300CCEFA77
 
 cp ~/.newsboat/config ~/Documents/repositories/dotfiles/.newsboat/
 cp ~/.newsboat/urls ~/Documents/repositories/dotfiles/.newsboat/
@@ -49,4 +49,4 @@ git commit -m "Update"
 #git remote add origin https://github.com/nlogocntrcaphnt/scripts.git
 git push -u origin main
 
-sudo youtube-dl -U
+#sudo youtube-dl -U
